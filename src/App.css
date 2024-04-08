@@ -69,4 +69,15 @@
 .posts_list {
   display: flex;
   flex-direction: column;
+  gap: 10px;
+}
+.posts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.delete_post {
+  margin-left: 15px;
+  padding: 0.2em;
+  background-color: rgb(189, 0, 0);
 }

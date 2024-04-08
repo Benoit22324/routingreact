@@ -27,6 +27,10 @@ const PostsReducer = (state, action) => {
             content: '',
             errmsg: '',
         }
+        case 'delpost': return {
+            ...state,
+            posts: action.payload,
+        }
 
         case 'adderr': return {
             ...state,
