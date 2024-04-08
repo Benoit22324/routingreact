@@ -42,10 +42,10 @@
 }
 
 /* Personal Corner */
-
 .nav_link {
   margin: 1.2em;
 }
+
 .add_form {
   display: flex;
   flex-direction: column;
