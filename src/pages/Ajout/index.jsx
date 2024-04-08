@@ -9,7 +9,7 @@ const Ajout = () => {
                 <label>Contenu:
                     <textarea type="text" name="content" placeholder="Veuillez saisir votre contenu"/>
                 </label>
-                <input type="submit" name="add" />
+                <input className="form_submit" type="submit" name="add" />
             </form>
         </>
     )

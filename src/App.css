@@ -61,3 +61,7 @@
 .add_form textarea {
   margin-left: 10px;
 }
+.form_submit {
+  margin: auto;
+  color: black;
+}
