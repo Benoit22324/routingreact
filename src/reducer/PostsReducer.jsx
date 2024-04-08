@@ -29,7 +29,7 @@ const PostsReducer = (state, action) => {
         }
         case 'delpost': return {
             ...state,
-            posts: action.payload,
+            posts: state.posts.filter((post) => post.id !== action.payload),
         }
 
         case 'adderr': return {
