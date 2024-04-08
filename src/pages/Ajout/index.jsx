@@ -2,7 +2,7 @@ const Ajout = () => {
     return (
         <>
             <h2>Formulaire d'ajout d'un post</h2>
-            <form>
+            <form className="add_form">
                 <label>Titre:
                     <input type="text" placeholder="Veuillez saisir un titre"/>
                 </label>

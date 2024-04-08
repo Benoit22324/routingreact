@@ -8,8 +8,8 @@ function App() {
   return (
     <>
       <nav>
-        <NavLink className={'nav_link'} to={'/'}>Acceuil</NavLink>
-        <NavLink className={'nav_link'} to={'/add'}>Ajouter</NavLink>
+        <NavLink className={'nav_link'} style={({isActive}) => {return isActive ? {fontWeight: 'bold', textDecoration: 'underline'} : {}}} to={'/'}>Acceuil</NavLink>
+        <NavLink className={'nav_link'} style={({isActive}) => {return isActive ? {fontWeight: 'bold', textDecoration: 'underline'} : {}}} to={'/add'}>Ajouter</NavLink>
       </nav>
       <Routes>
         <Route path={'/'} element={<Acceuil/>}/>
