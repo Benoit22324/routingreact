@@ -10,11 +10,13 @@ const PostsReducer = (state, action) => {
     switch(action.type) {
         case 'updatetitle': return {
             ...state,
-            title: action.payload
+            title: action.payload,
+            errmsg: '',
         }
         case 'updatecontent': return {
             ...state,
-            content: action.payload
+            content: action.payload,
+            errmsg: '',
         }
 
         case 'addpost': return {
