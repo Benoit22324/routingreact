@@ -1,5 +1,6 @@
 export const init = {
     posts: [],
+    id: 1,
     title: '',
     content: '',
     errmsg: '',
@@ -18,7 +19,8 @@ const PostsReducer = (state, action) => {
 
         case 'addpost': return {
             ...state,
-            posts: [...state.posts, {id: state.posts.length + 1, title: state.title, content: state.content}],
+            posts: [...state.posts, {id: state.id, title: state.title, content: state.content}],
+            id: state.id + 1,
             title: '',
             content: '',
             errmsg: '',
