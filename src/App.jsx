@@ -1,6 +1,8 @@
 import { NavLink, Routes, Route } from 'react-router-dom'
 import Acceuil from './pages/Acceuil'
 import Ajout from './pages/Ajout'
+import Error from './pages/Error'
+import Post from './pages/Post'
 import './App.css'
 
 function App() {
@@ -14,6 +16,8 @@ function App() {
       <Routes>
         <Route path={'/'} element={<Acceuil/>}/>
         <Route path={'/add'} element={<Ajout/>}/>
+        <Route path={'/post/:id'} element={<Post/>}/>
+        <Route path={'*'} element={<Error/>}/>
       </Routes>
     </>
   )

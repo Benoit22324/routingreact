@@ -65,3 +65,8 @@
   margin: auto;
   background-color: #686868;
 }
+
+.posts_list {
+  display: flex;
+  flex-direction: column;
+}
