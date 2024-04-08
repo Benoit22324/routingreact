@@ -9,6 +9,13 @@ const Ajout = () => {
     const updatecontent = (e) => {
         dispatch({type: 'updatecontent', payload: e.target.value})
     }
+    const addpost = (e) => {
+        e.preventDefault();
+        if (state.title.trim() !== '' && state.content.trim() !== '') dispatch({type: 'addpost'})
+        else if (state.title.trim() === '' && state.content.trim() !== '') dispatch({type: 'adderr', payload: 'Veuillez saisir un titre'})
+        else if (state.title.trim() !== '' && state.content.trim() === '') dispatch({type: 'adderr', payload: 'Veuillez saisir le contenu'})
+        else if (state.title.trim() === '' && state.content.trim() === '') dispatch({type: 'adderr', payload: 'Veuillez saisir un titre et son contenu'})
+    }
 
     return (
         <>
@@ -20,8 +27,11 @@ const Ajout = () => {
                 <label>Contenu:
                     <textarea type="text" name="content" value={state.content} placeholder="Veuillez saisir votre contenu" onChange={updatecontent}/>
                 </label>
-                <button className="form_submit" onClick={() => dispatch({type: 'addpost'})}>Ajouter</button>
+                <button className="form_submit" onClick={addpost}>Ajouter</button>
             </form>
+            {
+                state.errmsg !== '' && <p>{state.errmsg}</p>
+            }
         </>
     )
 }
